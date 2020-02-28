@@ -6,11 +6,12 @@ import matplotlib.pyplot as plt
 
 x = sy.Symbol('x')
 y = sy.Symbol('y')
-# Split function of 2 variables #
+# System equations of 2 variables x , y #
 
 f1 = x**2 + y
 f2 = 5*x + 4 * y + 7
 
+######################3
 FM = sy.Matrix(2, 1, (f1, f2))
 xx = np.linspace(0, 10, 200, dtype=np.float64)
 yy = np.linspace(0, 10, 200, dtype=np.float64)
