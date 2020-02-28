@@ -11,16 +11,10 @@ y = sy.Symbol('y')
 f1 = x**2 + y
 f2 = 5*x + 4 * y + 7
 
-######################3
+######################
+
 FM = sy.Matrix(2, 1, (f1, f2))
-xx = np.linspace(0, 10, 200, dtype=np.float64)
-yy = np.linspace(0, 10, 200, dtype=np.float64)
-zz1 = np.ndarray(xx.size or yy.size, dtype=np.float64)
-zz2 = np.ndarray(xx.size or yy.size, dtype=np.float64)
 first_guess = sy.Matrix(2, 1, [1, -1])
-for i in range(zz1.size):
-    zz1[i] = f1.subs({x: xx[i], y: yy[i]})
-    zz2[i] = f2.subs({x: xx[i], y: yy[i]})
 
 
 def newton_r_2var(Iter, func, x0):
